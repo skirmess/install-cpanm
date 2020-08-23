@@ -2,7 +2,7 @@ name: Install cpanminus
 description: Install cpanminus from web
 
 runs:
-  using: composite
+  using: "composite"
   steps: 
     - run: curl -L -s -o cpanminus.pl https://cpanmin.us
       shell: bash
