@@ -2,7 +2,7 @@ name: Install cpanminus
 description: Install cpanminus from web
 
 runs:
-  using: "composite"
+  using: composite
   steps: 
     - run: curl -L -s -o cpanminus.pl https://cpanmin.us
       shell: bash
@@ -10,5 +10,5 @@ runs:
       shell: bash
     - run: rm -f cpanminus.pl
       shell: bash
-    - run: use File::Spec; exec($^X, File::Spec->catfile(File::Spec->catdir(q<${{ github.action_path }}>, q<bin>), q<configure_local_lib.pl>), @ARGV);
+    - run: use File::Spec; exec($^X, File::Spec->catfile(File::Spec->catdir(q<${{ github.action_path }}>, q<bin>), q<configure_local_lib.pl>));
       shell: perl -- {0}
