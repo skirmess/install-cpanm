@@ -19,10 +19,19 @@ runs:
     - run: use File::Spec; exec($^X, File::Spec->catfile(File::Spec->catdir($ENV{GITHUB_ACTION_PATH}, q{bin}), q{configure_local_lib.pl}));
       shell: perl -- {0}
 
+    - run: echo "xxxxxxxxxxxxx env"
+      shell: bash
+
     - run: env
       shell: bash
 
+    - run: echo "xxxxxxxxxxxxx find"
+      shell: bash
+
     - run: find
+      shell: bash
+
+    - run: echo "xxxxxxxxxxxxx which"
       shell: bash
 
     - run: which cpanm

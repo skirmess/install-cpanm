@@ -18,7 +18,7 @@ local::lib->import;
 
 for my $var (@vars) {
     next if !exists $ENV{$var};
-    next if exists $old_ENV{$var} && $old_ENV{$var} eq $ENV{$var};
+    next if exists $old_ENV{$var} and $old_ENV{$var} eq $ENV{$var};
 
     print "::set-env name=${var}::$ENV{$var}\n";
     print "Setting env variable ${var} = $ENV{$var}\n";
