@@ -28,7 +28,7 @@ runs:
     - run: echo "xxxxxxxxxxxxx find"
       shell: bash
 
-    - run: find
+    - run: find / -name cpanm
       shell: bash
 
     - run: echo "xxxxxxxxxxxxx which"
