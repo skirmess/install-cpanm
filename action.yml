@@ -13,9 +13,6 @@ runs:
     - run: rm -f cpanminus.pl
       shell: bash
 
-    - run: env
-      shell: bash
-
     - run: pwd
       shell: bash
 

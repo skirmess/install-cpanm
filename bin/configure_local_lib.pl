@@ -21,6 +21,7 @@ for my $var (@vars) {
     next if exists $old_ENV{$var} && $old_ENV{$var} eq $ENV{$var};
 
     print "::set-env name=${var}::$ENV{$var}\n";
+    print "Setting env variable ${var} = $ENV{$var}\n";
 }
 
 # vim: ts=4 sts=4 sw=4 et: syntax=perl
