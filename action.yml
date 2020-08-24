@@ -4,9 +4,6 @@ description: Install cpanminus from web
 runs:
   using: "composite"
   steps: 
-    - run: git --git-dir $GITHUB_ACTION_PATH/.git log -1
-      shell: bash
-
     - run: curl -L -s -o cpanminus.pl https://cpanmin.us
       shell: bash
 
