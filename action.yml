@@ -31,8 +31,8 @@ runs:
     - run: find / -name cpanm 2>/dev/zero
       shell: bash
 
-    - run: echo "xxxxxxxxxxxxx which"
-      shell: bash
+#    - run: echo "xxxxxxxxxxxxx which"
+#      shell: bash
 
-    - run: which cpanm
-      shell: bash
+#    - run: which cpanm
+#      shell: bash
