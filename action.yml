@@ -18,3 +18,6 @@ runs:
 
     - run: use File::Spec; exec($^X, File::Spec->catfile(File::Spec->catdir($ENV{GITHUB_ACTION_PATH}, q{bin}), q{configure_local_lib.pl}));
       shell: perl -- {0}
+
+    - run: env
+      shell: bash
