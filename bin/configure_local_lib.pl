@@ -17,6 +17,34 @@ require local::lib;
 local::lib->import;
 
 for my $var (@vars) {
+    if ( exists $ENV{$var} ) {
+        print '$ENV{' . $var . "} exists\n";
+    }
+    else {
+        print '$ENV{' . $var . "} doesn't exists\n";
+    }
+
+    if ( defined $ENV{$var} ) {
+        print '$ENV{' . $var . "} is defined\n";
+    }
+    else {
+        print '$ENV{' . $var . "} isn't defined\n";
+    }
+
+    if ( exists $old_ENV{$var} ) {
+        print '$old_ENV{' . $var . "} exists\n";
+    }
+    else {
+        print '$old_ENV{' . $var . "} doesn't exists\n";
+    }
+
+    if ( defined $old_ENV{$var} ) {
+        print '$old_ENV{' . $var . "} is defined\n";
+    }
+    else {
+        print '$old_ENV{' . $var . "} isn't defined\n";
+    }
+
     next if !exists $ENV{$var};
     next if (exists $old_ENV{$var}) && ($old_ENV{$var} eq $ENV{$var});
 
