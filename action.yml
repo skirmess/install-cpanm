@@ -3,7 +3,22 @@ description: Install cpanminus from web
 
 runs:
   using: "composite"
-  steps: 
+  steps:
+    - run: echo $PERL_MB_OPT
+      shell: bash
+
+    - run: echo $PERL_MM_OPT
+      shell: bash
+
+    - run: echo $PERL5LIB
+      shell: bash
+
+    - run: echo $PATH
+      shell: bash
+
+    - run: echo $PERL_LOCAL_LIB_ROOT
+      shell: bash
+
     - run: curl -L -s -o cpanminus.pl https://cpanmin.us
       shell: bash
 
@@ -25,11 +40,11 @@ runs:
     - run: env
       shell: bash
 
-    - run: echo "xxxxxxxxxxxxx find"
-      shell: bash
+#    - run: echo "xxxxxxxxxxxxx find"
+#      shell: bash
 
-    - run: find / -name cpanm 2>/dev/zero
-      shell: bash
+#    - run: find / -name cpanm 2>/dev/zero
+#      shell: bash
 
 #    - run: echo "xxxxxxxxxxxxx which"
 #      shell: bash
